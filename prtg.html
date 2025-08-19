@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paratage </title>
+        <link rel="stylesheet" href="style.css">
+      <link href="https://api.fontshare.com/v2/css?f[]=ranade@400,700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+   
+  <!-- === NAVBAR === -->
+  <nav class="navbar">
+    <div class="navbar-logo">REVISE TOUT</div>
+
+    <!-- === BOUTON BURGER === -->
+    <div class="burger" id="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <!-- === LIENS DE NAVIGATION === -->
+    <div class="navbar-links" id="navbar-links">
+      <a href="/index.html">Accueil</a>
+      <a href="/lecons.html">Leçon</a>
+      <a href="/epreuve.html">Épreuves</a>
+      <a href="/exo.html">Exercices</a>
+       <a href="/prtg.html">Partager</a>
+    </div>
+  </nav>
+
+  <!-- BANNIERE3  -->
+<div class="photo">
+  <img src="photo/banniére3.jpeg" alt="Oooops désoléé">
+</div>
+    
+
+
+  <section class="upload-section">
+    <h2>Partager un fichier éducatif</h2>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+      <!-- Champ Fichier -->
+      <label for="fichier">Sélectionnez votre fichier PDF :</label>
+      <input type="file" id="fichier" name="fichier" accept=".pdf" required>
+
+      <!-- Choix Matière -->
+      <label for="matiere">Matière :</label>
+      <select id="matiere" name="matiere" required>
+        <option value="">-- Choisir une matière --</option>
+        <option value="maths">Mathématiques</option>
+        <option value="pc">Physique-Chimie</option>
+        <option value="svt">SVT</option>
+        <option value="philo">Philosophie</option>
+        <option value="histoire">Histoire-Géographie</option>
+        <option value="francais">Français</option>
+        <option value="anglais">Anglais</option>
+        <option value="espagnol">Espagnol</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <!-- Bouton Partager -->
+      <button type="submit" class="btn">Partager</button>
+    </form>
+  </section>
+
+
+
+
+    
+  <!-- ===== FOOTER ===== -->
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 Tous droits réservés</p>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="mailto:msarr2697@gmail.com" class="social-icon">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/221785702916" target="_blank" class="social-icon">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>

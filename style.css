@@ -1,0 +1,537 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #226D68;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+
+h1, h2 {
+  font-weight: 700;
+  text-align: center;
+}
+
+em, .italic {
+  font-style: italic;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #18534F; 
+  color: #E5E0D8;
+  position: relative;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #E5E0D8;
+  font-size: 1rem;
+}
+
+.navbar-links a:hover {
+  color: #F6d238;
+}
+
+/* ----- BURGER MENU ----- */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #E5E0D8;
+  transition: 0.3s;
+}
+
+/* ----- Responsive Burger ----- */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #226D68;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+/* ========== IMAGE ========== */
+
+.photo {
+  width: 100%;
+  max-width: 50rem;
+  max-height: 60vh;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-bottom: 5rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* remplir sans déformer */
+  object-position: center;  /* centrer l’image */
+  display: flex;
+  border-radius: 0.75rem;
+}
+
+/* ====== RESPONSIVE POUR MOBILES ====== */
+@media (max-width: 768px) {
+  .photo {
+    max-height: 40vh;
+    border-radius: 0.4rem;
+  
+  }
+
+  .photo2 img {
+    object-position: center top;
+  }
+}
+
+.photo2 {
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.photo2 img {
+  width: 100%;
+  height: auto;
+  max-height: 40vh;
+  object-fit: contain; 
+  display: block;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+
+/* ======= TEXTE D'INTRODUCTION SOUS BANNIÈRE ======= */
+.text {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f5f5f5; /* Couleur douce sous la bannière */
+  color: #f8cb03;
+}
+
+ .text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+ .text p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #18534F;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 600px) {
+  .text h1 {
+    font-size: 1.5rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+}
+
+/* ========== RESET ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== BOUTONS ========== */
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #18534F;
+  background-color: #F6d238;
+  border: none;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  min-width: 180px;
+}
+
+.btn:hover {
+  background-color: #18534F;
+  color: #F6d238;
+}
+
+.btn svg {
+  margin-left: 1rem;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ========== BOUTON "VOIR" ========== */
+.btn-voir {
+  background-color: #18534F;
+  color: #E5E0D8;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn-voir:hover {
+  background-color: white;
+  color: #18534F;
+}
+
+/* ========== BOUTONS D'ACCÈS ========== */
+.access-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.access-buttons .btn.access {
+  background-color: #18534F;
+  color: #F6d238;
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+}
+
+.access-buttons .btn.access:hover {
+  background-color: #226D68;
+}
+
+/* ========== TITRE PARTAGER ========== */
+.partager-titre {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #18534F;
+  background-color: #f0fdfc;
+  padding: 0.8rem 1.2rem;
+  border-left: 6px solid #F6d238;
+  border-radius: 0.5rem;
+  margin: 2rem auto 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (min-width: 768px) {
+  .access-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+
+  .btn-voir {
+    font-size: 1.4rem;
+    padding: 1rem 3.5rem;
+  }
+}
+
+
+
+
+
+
+
+/* ========== FORMULAIRE ========== */
+form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px #18534f;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 70vh;
+ }
+
+/* LABELS */
+label {
+  display: block;
+
+  margin-top: 1rem;
+  margin-bottom: auto;
+  font-weight: bold;
+  color: rgb(170, 165, 165);
+  background-color: #18534F;
+
+}
+
+/* SELECT */
+select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  margin-top: 5rem;
+  border-radius: 8px;
+  border: 1px solid #1C1C1C;
+  background-color: white;
+}
+
+
+/* ----- CHAMP FICHIER & SELECT ----- */
+input[type="file"],
+select {
+  position: 50%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  form {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+  }
+
+  label {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin-top: 0.3rem;
+  }
+
+  button,
+  .btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .text2 h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .text2 p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+
+/* BOUTON GÉNÉRAL */
+button {
+  display: block;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #E5E0D8;
+  background-color: #226D68;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1C1C1C;
+}
+
+/* BOUTON SPÉCIFIQUE "send" */
+button.send {
+  background-color: #ff9;
+  color: #18534f;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet au survol */
+button.send:hover {
+  background-color: #14665f;
+  transform: scale(1.03);
+}
+
+/* Effet lors du clic */
+button.send:active {
+  transform: scale(0.98);
+}
+
+/* ========== RESPONSIVE (mobiles) ========== */
+@media (max-width: 600px) {
+  form {
+    padding: 1rem;
+  }
+
+  select {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+
+  button,
+  button.send {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ===== FOOTER STYLE ===== */
+.footer {
+  background-color: #18534F;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 60vh;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+ 
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+ 
+  transform: scale(1.2);
+}
+
+
+/* ========== RESPONSIVE TEXTE & LAYOUT ========== */
+@media (min-width: 48rem) {
+  .text h1 {
+    font-size: 2.5rem;
+  }
+
+  .text h4 {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  body {
+    max-width: 64.5rem;
+    margin: auto;
+  }
+}
